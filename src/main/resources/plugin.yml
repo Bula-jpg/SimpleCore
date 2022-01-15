@@ -1,0 +1,14 @@
+name: SimpleCore
+version: '${project.version}'
+main: xyz.gnom.simplecore.SimpleCore
+api-version: 1.18
+authors: [ Gnom ]
+commands:
+  adminrestart:
+    description: "Its just a better restart!"
+    usage: /adminrestart
+    permission: simplecore.restart
+  updateconfig:
+    description: "Update config!"
+    usage: /updateconfig <confirm>
+    permission: simplecore.updateconfig
