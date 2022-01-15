@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import xyz.gnom.simplecore.SimpleCore;
 
 import static org.bukkit.Bukkit.getServer;
@@ -11,10 +12,10 @@ import static org.bukkit.Bukkit.spigot;
 
 
 public class BetterRestart implements CommandExecutor {
-    public static  String prefix = spigot().getConfig().getString("prefix");
-    public static String fiveteen = spigot().getConfig().getString("adminrestart.15s");
-    public static String ten = spigot().getConfig().getString("adminrestart.10s");
-    public static String five = spigot().getConfig().getString("adminrestart.5s");
+    String prefix = SimpleCore.getInstance().getConfig().getString("prefix");
+    String fiveteen = SimpleCore.getInstance().getConfig().getString("adminrestart.15s");
+    String ten = SimpleCore.getInstance().getConfig().getString("adminrestart.10s");
+    String five = SimpleCore.getInstance().getConfig().getString("adminrestart.5s");
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender.hasPermission("simplecore.restart")) {
@@ -40,7 +41,9 @@ public class BetterRestart implements CommandExecutor {
             Bukkit.getScheduler().scheduleSyncDelayedTask(SimpleCore.instance, new Runnable() {
                 @Override
                 public void run() {
-                    runCommandAsConsole("kickall &c&lTrwa restart");
+                    for (Player player : Bukkit.getOnlinePlayers()) {
+                        player.kickPlayer(spigot().getConfig().getString("adminrestart.kick").replace("&", "§"));
+                    }
                     getServer().broadcastMessage("§c§lRestart");
                 }
             }, 300L); //20 Tick (1 Second) delay before run() is called

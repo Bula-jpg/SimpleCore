@@ -5,4 +5,5 @@ prefix: "&0&l[&b&lSimple&a&lCore&0&l] &4&l>>"
 adminrestart:
   15s: "§4§lSerwer zostanie zrestartowany za 15 sekund!"
   10s: "§4§lSerwer zostanie zrestartowany za 10 sekund!"
-  5s: " §4§lSerwer zostanie zrestartowany za 5 sekund!"
+  5s: "§4§lSerwer zostanie zrestartowany za 5 sekund!"
+  kick: "&4&lTrwa restart!"

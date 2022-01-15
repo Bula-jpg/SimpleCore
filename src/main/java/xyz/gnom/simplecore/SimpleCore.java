@@ -18,6 +18,9 @@ public final class SimpleCore extends JavaPlugin {
 
         //TODO kick, i może ban :)
     }
+    public static SimpleCore getInstance() {
+        return instance;
+    }
 
     @Override
     public void onDisable() {
