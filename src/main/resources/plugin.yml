@@ -11,4 +11,6 @@ commands:
   updateconfig:
     description: "Update config!"
     usage: /updateconfig <confirm>
-    permission: simplecore.updateconfig
+  help:
+    description: "Basic help."
+    aliases: [ pomoc ]

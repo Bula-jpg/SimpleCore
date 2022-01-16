@@ -1,9 +1,22 @@
 config_version: ${project.version}
 
 prefix: "&0&l[&b&lSimple&a&lCore&0&l] &4&l>>"
+no-permission: "&4&lBrak permisji!"
+
+help:
+  - "&0&l[&b&lSimple&a&lCore&0&l]"
+  - "/nigger - pizda"
+  - "/pizda - kutas"
 
 adminrestart:
-  15s: "§4§lSerwer zostanie zrestartowany za 15 sekund!"
-  10s: "§4§lSerwer zostanie zrestartowany za 10 sekund!"
-  5s: "§4§lSerwer zostanie zrestartowany za 5 sekund!"
+  15s: "&4&lSerwer zostanie zrestartowany za 15 sekund!"
+  10s: "&4§&Serwer zostanie zrestartowany za 10 sekund!"
+  5s: "&4&lSerwer zostanie zrestartowany za 5 sekund!"
   kick: "&4&lTrwa restart!"
+
+blocked-cmds:
+  - "/plugins"
+  - "/pl"
+  - "/bukkit:plugins"
+  - "/bukkit:pl"
+  - "/bukkit:help"
