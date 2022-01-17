@@ -8,9 +8,8 @@ commands:
     description: "Its just a better restart!"
     usage: /adminrestart
     permission: simplecore.restart
-  updateconfig:
-    description: "Update config!"
-    usage: /updateconfig <confirm>
   help:
     description: "Basic help."
     aliases: [ pomoc ]
+  stats:
+    aliases: [ statystyki ]

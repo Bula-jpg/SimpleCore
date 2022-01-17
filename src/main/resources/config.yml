@@ -3,14 +3,33 @@ config_version: ${project.version}
 prefix: "&0&l[&b&lSimple&a&lCore&0&l] &4&l>>"
 no-permission: "&4&lBrak permisji!"
 
+#placeholders: %name
+#"none" to disable
+join: "&7&l[&a&l+&7&l] &b%name &7dołączył/a na serwer!"
+leave: "&7&l[&4&l-&7&l] &b%name &7wyszedł/a z serwera!"
+
+#true for on, false for off
+stats: true
+
+#placeholders:
+# %name - player name
+# %joins - number of player joins
+# %hours - time played
+# %minutes - time played
+# %seconds - time played
+stats-command:
+  - "Witamy, %name."
+  - "Oto twoje statystyki:"
+  - "Liczba wejść na serwer: %joins"
+  - "Czas przebyty na serwerze: %hoursh %minutesm %secondss"
+
 help:
   - "&0&l[&b&lSimple&a&lCore&0&l]"
-  - "/nigger - pizda"
-  - "/pizda - kutas"
+  - "/command - description"
 
 adminrestart:
   15s: "&4&lSerwer zostanie zrestartowany za 15 sekund!"
-  10s: "&4§&Serwer zostanie zrestartowany za 10 sekund!"
+  10s: "&4&lSerwer zostanie zrestartowany za 10 sekund!"
   5s: "&4&lSerwer zostanie zrestartowany za 5 sekund!"
   kick: "&4&lTrwa restart!"
 

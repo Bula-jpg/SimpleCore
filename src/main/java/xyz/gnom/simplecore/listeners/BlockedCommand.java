@@ -17,7 +17,6 @@ public class BlockedCommand implements Listener {
                 if (event.getMessage().equalsIgnoreCase(cmd)) {
                     event.getPlayer().sendMessage(prefix + " " + blockedcmd);
                     event.setCancelled(true);
-                    //TODO upiększyć i dodać permisje
                 }
             }
         }
